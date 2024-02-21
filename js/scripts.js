@@ -5,7 +5,8 @@ let pokemonList = [
         attack: 49, 
         defense: 49, 
         speed: 45, 
-        type: [
+        height: 0.7,
+        types: [
             'grass',
             'poison'
         ] 
@@ -16,7 +17,8 @@ let pokemonList = [
         attack: 48,
         defense: 65,
         speed: 43,
-        type: ['water']
+        height: 0.5,
+        types: ['water']
     },
     {
         name: 'Charmander', 
@@ -24,6 +26,7 @@ let pokemonList = [
         attack: 52,
         defense: 43,
         speed: 65,
-        type: ['fire']
+        height: 0.6,
+        types: ['fire']
     }
 ];
