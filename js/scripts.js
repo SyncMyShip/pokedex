@@ -31,11 +31,11 @@ let pokemonList = [
     }
 ];
 
-
-for (let i = 0; i < pokemonList.length; i++ ) {
-    if (pokemonList[i].height > 0.6) {
-    document.write(pokemonList[i].name + " (height: " + pokemonList[i].height + ")" + " - Wow, that's big!" + "<br>")
+// writes the name of the Pokemon && appends a string if height is > 0.6
+pokemonList.forEach(function(pokemon) {
+    if (pokemon.height > 0.6) {
+      document.write(pokemon.name + " (height: " + pokemon.height + ")" + " - Wow, that's big!" + "<br>")
     } else {
-    document.write(pokemonList[i].name + " (height: " + pokemonList[i].height + ")" + "<br>")
+      document.write(pokemon.name + " (height: " + pokemon.height + ")" + "<br>")
     }
-}
+  })
