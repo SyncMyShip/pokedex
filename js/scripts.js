@@ -70,3 +70,4 @@ let pokemonRepository = (function () {
   //     document.write(pokemon.name + " (height: " + pokemon.height + ")" + "<br>")
   //   }
   // })
+
