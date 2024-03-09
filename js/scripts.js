@@ -39,17 +39,35 @@ let pokemonRepository = (function () {
     function add(pokemon) {
       pokemonList.push(item);
     }
-    
+
+
+    function showDetails(pokemon) {
+      console.log(pokemon)
+    }
+
+    function addListItem(pokemon) {
+      let pokemonList = document.querySelector('.pokemon-list')
+      let listItem = document.createElement('li')
+      let button = document.createElement('button')
+      button.innerText = pokemon.name
+      button.classList.add('pokemon-name')
+      listItem.appendChild(button);
+      pokemonList.appendChild(listItem);
+
+      button.addEventListener('click', function(event) {
+        showDetails(pokemon.name);
+      })
+    } 
+
     return {
       add: add,
-      getAll: getAll
+      getAll: getAll,
+      addListItem: addListItem,
+      showDetails: showDetails,
     };
   })();
-  
-  pokemonRepository.getAll().forEach(function(pokemon) {
-    if (pokemon.height > 0.6) {
-      document.write(pokemon.name + " (height: " + pokemon.height + ")" + " - Wow, that's big!" + "<br>")
-    } else {
-      document.write(pokemon.name + " (height: " + pokemon.height + ")" + "<br>")
-    }
-  })
+
+// adds each pokemon name to a button - logs name when clicked
+pokemonRepository.getAll().forEach(function(pokemon) {
+  pokemonRepository.addListItem(pokemon);
+})
