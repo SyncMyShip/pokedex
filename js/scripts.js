@@ -45,6 +45,7 @@ let pokemonRepository = (function () {
       console.log(pokemon)
     }
 
+
     // try creating separate function for event listener
     function clicksHandler(listener, pokemon) {
       listener.addEventListener('click', function(e) {
@@ -63,7 +64,6 @@ let pokemonRepository = (function () {
 
       clicksHandler(button, pokemon);
     }
-
 
     return {
       add: add,
