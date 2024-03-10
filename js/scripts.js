@@ -37,12 +37,19 @@ let pokemonRepository = (function () {
     }
     
     function add(pokemon) {
-      pokemonList.push(item);
+      pokemonList.push(pokemon);
     }
 
 
     function showDetails(pokemon) {
       console.log(pokemon)
+    }
+
+    // try creating separate function for event listener
+    function clicksHandler(listener, pokemon) {
+      listener.addEventListener('click', function(e) {
+        showDetails(pokemon);
+      });
     }
 
     function addListItem(pokemon) {
@@ -54,10 +61,9 @@ let pokemonRepository = (function () {
       listItem.appendChild(button);
       pokemonList.appendChild(listItem);
 
-      button.addEventListener('click', function(event) {
-        showDetails(pokemon.name);
-      })
-    } 
+      clicksHandler(button, pokemon);
+    }
+
 
     return {
       add: add,
