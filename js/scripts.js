@@ -108,7 +108,7 @@ let pokemonRepository = (function () {
 
   return {
     add: add,
-    getAll: getAll,
+    getAll: getAll, 
     addListItem: addListItem,
     listenForClick: listenForClick,
     loadList: loadList,
@@ -118,6 +118,6 @@ let pokemonRepository = (function () {
 
 pokemonRepository.loadList().then(function(pokemon) {
 pokemonRepository.getAll().forEach(function(pokemon) {
-  pokemonRepository.addListItem(pokemon);
+      pokemonRepository.addListItem(pokemon); 
 })
-})
+}) 
