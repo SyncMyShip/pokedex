@@ -1,0 +1,7 @@
+.vscode/
+eslint.config.mjs
+node_modules/
+eslintrc
+package-lock*
+package*
+prettierrc
