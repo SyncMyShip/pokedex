@@ -21,15 +21,6 @@
         ],
         "no-empty-static-block": [
             "warn"
-        ],
-        "no-delete-var": [
-            "error"
-        ],
-        "no-unused-vars": [
-            "warn"
-        ],
-        "no-dupe-args": [
-            "warn"
         ]
     }
 }
