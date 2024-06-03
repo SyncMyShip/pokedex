@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 (function (global, factory) {
 	typeof exports === 'object' && typeof module !== 'undefined' ? factory() :
 	typeof define === 'function' && define.amd ? define(factory) :
@@ -365,7 +366,7 @@ Promise._immediateFn =
 
 Promise._unhandledRejectionFn = function _unhandledRejectionFn(err) {
   if (typeof console !== 'undefined' && console) {
-    console.warn('Possible Unhandled Promise Rejection:', err); // eslint-disable-line no-console
+    console.warn('Possible Unhandled Promise Rejection:', err);  
   }
 };
 
