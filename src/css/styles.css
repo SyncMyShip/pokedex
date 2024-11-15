@@ -35,11 +35,38 @@ text-decoration: underline;
 
 .show-details {
   background: black;
-  width: 80%;
+  width: 70%;
   margin: auto;
   font-weight: bold;
 }
 
+h5 {
+  margin-top: 4px;
+}
+
 .show-details:hover {
-  opacity: 50%;
+  opacity: 80%;
+}
+
+.card-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-bottom: 3px solid #ddd;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  justify-content: center;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
 }
